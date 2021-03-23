@@ -1,11 +1,12 @@
 <?php
-    session_start();
-    //include
-    $msg_error = "";
+    	session_start();
+	include_once 'includes/manage_db.php';
+   	//include
+    	$msg_error = "";
     if(!empty($_POST['login']) and !empty($_POST['password'])) {
 		$user = get_user( $_POST );
-        if ($user->rowCount() == 1) 
-        {
+        	if ($user->rowCount() == 1) 
+        	{
 			$_SESSION['user_name'] = $_POST['login'];
 			header('Location: index.php');
 		} else {
