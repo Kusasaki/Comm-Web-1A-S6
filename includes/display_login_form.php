@@ -6,13 +6,13 @@
         <form method="POST" action="login.php" >
           <div> 
               <label for="login">Identifiant : </label>
-              <input type=”text” size=”20” name=”login” td>
+              <input type="text" size="20" name="login" td>
           </div>
           <div> 
                 <label for="password"> Mot de passe : </label>
-                <input type=”password” size=”20” name=”mdp” /></td>
+                <input type="password" size="20" name="mdp" /></td>
           </div>
-          <input type=”submit” value=”Envoyer”>
+          <input type="submit" value="Envoyer">
         </form>
 <!--peut rajouter du php pour ajouter un footer-->
   }
