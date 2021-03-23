@@ -9,3 +9,11 @@ include_once "db_acces.php";
 - afficher les stages déjà réalisé en fct d'un lieu
 - 
 */
+
+function get_user ($infos){
+    $request = get_db() -> prepare("SELECT * FROM ACCES WHERE nom_utilisateur=:nom_utilisateur and mot_de_passe=:mot_de_passe");
+		$request->bindValue("nom_utilisateur", $infos['login'], PDO::PARAM_STR);
+		$request->bindValue("mot_de_passe", $infos['password'], PDO::PARAM_STR);
+		$request->execute();
+		return $request;
+	}
