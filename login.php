@@ -1,7 +1,7 @@
 <?php
     	session_start();
 	include_once 'includes/manage_deb.php';
-   	//include
+   	include_once 'includes/display_login_form.php';
     	$msg_error = "";
     if(!empty($_POST['login']) and !empty($_POST['password'])) {
 		$user = get_user( $_POST );
