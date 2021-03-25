@@ -1,6 +1,6 @@
 <?php
     require_once "utils.php"; 
-    include_once 'head.php';?> 
+    include_once "head.php";?> 
 
 
 <body>
