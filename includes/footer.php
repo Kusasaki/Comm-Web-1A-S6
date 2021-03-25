@@ -1,4 +1,4 @@
-<?php include_once 'head.php'; ?>
+<?php include_once "head.php"; ?>
 
 <footer class="bg-light text-center text-lg-start">
   <div class="container p-4">
