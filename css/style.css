@@ -1,0 +1,12 @@
+.titre_page{
+    text-align:center;
+}
+.cadre {
+    border-width:2px;
+    border-style: solid;
+    border-color: black;
+}
+
+.titre_rubrique{
+    text-align: center;
+}
