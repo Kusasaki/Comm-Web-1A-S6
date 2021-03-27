@@ -14,7 +14,7 @@
     <li class="nav-item">
             <a class ="nav-link" href="index.php" title="Accueil" class="">Accueil</a></li>
         <li class="nav-item">
-            <a class ="nav-link" href="promoTest.php" title="Nos chères promotions" class="">Promo</a></li>
+            <a class ="nav-link" href="promos.php" title="Nos chères promotions" class="">Promo</a></li>
         <li class="nav-item">
             <a class ="nav-link" href="searchpage.php" title="Recherche" class="">Recherche</a></li>
         <li class="nav-item">
