@@ -1,7 +1,10 @@
 <?php include_once "includes/head.php";
-    include_once "includes/navbar.php"; ?>
+    include_once "includes/functions.php";
+    session_start();?>
+
 <html>
     <body>
+    <?php include_once "includes/header.php"; ?>
 	<div>
 		<h1 class="titre_page">Bienvenue sur A La Recherche Du Patio Perdu !</h1>
 		<h3 class="soustitre">Le site qui vous permet de retrouver les anciens de l'ENSC et une ambiance aussi chaleureuse que celle du patio</h3>        
@@ -50,10 +53,6 @@
 		  </a>
 		</div>
 <!--fin du carousel-->
-	    
-	        <form name="x" action="inscription.php" method="post">
-			<input type="submit" value="Page d'inscription">
-			</form>
     </body>
 <html>
 <?php
