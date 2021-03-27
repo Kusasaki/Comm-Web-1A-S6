@@ -2,12 +2,26 @@
 
 // Connect to the database. Returns a PDO object
 function getDb() {
-    // Local deployment
+    //Local deployment
     $server = "localhost";
     $username = "diane";
     $password = "ensc";
     $db = "kaonashi";
-    
+    return new PDO("mysql:host=$server;dbname=$db;charset=utf8", "$username", "$password",
+    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    /*try{
+        $bdd = new PDO(
+            "mysql:host=localhost;dbname=kaonashi;charset=utf8",
+            "diane",
+            "ensc",
+            array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+        }
+        catch (Exception $e) {
+            die('Erreur fatale : ' . $e->getMessage());
+        }
+        return $bdd;*/
+
     /*try{
         $bdd = new PDO(
             "mysql:host=10.195.0.48;dbname=alarunru_anciens;charset=utf8",
@@ -18,8 +32,7 @@ function getDb() {
         catch (Exception $e) {
             die('Erreur fatale : ' . $e->getMessage());
         }
-        return $bdd;
-    }*/
+        return $bdd;*/
 }
 
 // Check if a user is connected
