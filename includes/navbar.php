@@ -1,6 +1,6 @@
 <?php
-    require_once "utils.php"; 
-    include_once "head.php";?> 
+    include_once "head.php";
+    //require_once "utils.php"; ?> 
 
 
 <body>
@@ -8,37 +8,37 @@
 <div class="row mb-5">
 <nav class = "navbar navbar-expand">
 <a class="navbar-brand" href="#">
-    <img src="logo.png" href="index.php" width ="30" height="30">
+    <img src="images/logo.png" href="index.php" width ="30" height="30">
 </a>
     <ul class = "navbar-nav mr-auto">
     <li class="nav-item">
-            <a class ="nav-link" href="/index.php" title="Accueil" class="">Accueil</a></li>
+            <a class ="nav-link" href="index.php" title="Accueil" class="">Accueil</a></li>
         <li class="nav-item">
-            <a class ="nav-link" href="/promo.php" title="Nos chères promotions" class="">Promo</a></li>
+            <a class ="nav-link" href="promoTest.php" title="Nos chères promotions" class="">Promo</a></li>
         <li class="nav-item">
-            <a class ="nav-link" href="/searchpage.php" title="Recherche" class="">Recherche</a></li>
+            <a class ="nav-link" href="searchpage.php" title="Recherche" class="">Recherche</a></li>
         <li class="nav-item">
 
-        <?php if(isUserConnected()){?>
+        <?php //if(isUserConnected()){?>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuButton
 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bonjour !</a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton
 ">
-            <a class="dropdown-item" href="/profil.php">Voir mon profil</a>
-            <a class="dropdown-item" href="/mesexp.php">Voir mes expériences</a>
-            <a class="dropdown-item" href="/logout.php">Me déconnecter</a>
+            <a class="dropdown-item" href="profil.php">Voir mon profil</a>
+            <a class="dropdown-item" href="mesexp.php">Voir mes expériences</a>
+            <a class="dropdown-item" href="logout.php">Me déconnecter</a>
             
           </div>
         </div>
 
-        <?php }?>
-        <?php }else{?>
+        <?php //}?>
+        <?php //}else{?>
                 <li class="nav-item">
-                <a class ="nav-link" href="/login.php" title="Se connecter" class="">Connexion</a></li>
+                <a class ="nav-link" href="login.php" title="Se connecter" class="">Connexion</a></li>
                 <li class="nav-item">
-                <a class ="nav-link" href="/inscription.php" title="Inscription" class="">Inscription</a></li>
-        <?php }?>
+                <a class ="nav-link" href="inscription.php" title="Inscription" class="">Inscription</a></li>
+        <?php //}?>
     </ul>
 </nav>
 </div>
@@ -51,3 +51,4 @@
 
 
 </body>
+
