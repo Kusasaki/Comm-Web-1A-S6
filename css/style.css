@@ -1,5 +1,13 @@
-.titre_page{
+.titre_page, .soustitre{
     text-align:center;
+    padding-right: 10px;
+    padding-left:10px;
+}
+#carouselExampleIndicators{
+    height: 25%;
+    width:60%;
+    Margin : auto;
+    Display:flex;
 }
 .cadre {
     border-width:2px;
@@ -9,4 +17,13 @@
 
 .titre_rubrique{
     text-align: center;
+}
+.card-columns{
+    margin-left : 5%;
+    margin-right: 5%;
+}
+
+.navbar{
+    Margin:auto;
+    Display: flex;
 }
