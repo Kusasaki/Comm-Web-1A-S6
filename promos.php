@@ -1,8 +1,12 @@
 <?php include_once "includes/head.php"; 
-    include_once 'includes/navbar.php'?>
+    session_start();?>
 
-<h2 class="titre_page">Nos chères promotions :</h2>
-</br>
+<html>
+
+    <?php include_once 'includes/header.php';?>
+    
+  <h2 class="titre_page">Nos chères promotions :</h2>
+  </br>
 
 <div class="card-columns">
   <div class="card">
