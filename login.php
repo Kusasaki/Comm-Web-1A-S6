@@ -1,6 +1,6 @@
 <?php
     	session_start();
-	include_once 'includes/manage_db.php';
+	include_once 'includes/functions.php';
    	include_once 'includes/display_login_form.php';
     	$msg_error = "";
     if(!empty($_POST['login']) and !empty($_POST['password'])) {
