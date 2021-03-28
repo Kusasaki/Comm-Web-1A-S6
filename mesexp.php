@@ -1,25 +1,40 @@
 <?php include_once "includes/head.php"; 
-    include_once "includes/header.php";
-    $eleve = $_GET['eleve'];
-    $exp = get_exp_by_student($eleve);
-	$res = $exp->fetchAll(); ?>
+    include_once "includes/functions.php";
+    session_start();
+
+    $user = $_SESSION['login'];
+    $info = get_utilisateur($user);
+    $result = $info ->fetchAll();    
+    foreach( $result as $ligne) 
+            { $nom = $ligne['nom_eleve'];
+                $prenom = $ligne['prenom_eleve'];
+            }
+    $eleve = get_xp($nom, $prenom);
+	$res = $eleve->fetchAll();?>
+
 <html>
-    
-    <h2 class="titre_page">Les expériences de <?php echo "$eleve"; ?></h2>
+    <?php include_once "includes/header.php";?>
+    <h2 class="titre_page">Mes expériences !</h2>
     </br>
-    <p class="titre_page"> Les expériences :</p>
-    <div class="cadre">
+    
         <?php 
         
-        foreach( $res as $ligne) 
-            { $id_organisation= $ligne['id_organisation'] ; 
-            $date_debut = $ligne['date_debut']?>
-            $date_fin = $ligne['date_fin']?>
-            <a class="center" href="descexp.php?nom_eleve=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom $prenom" ?></a><br/>
-            <?php
-            } 
-?>
-    </div>
+            
+            foreach( $res as $ligne) 
+            { ?> <div class="cadre"> <?php
+                if ($ligne['etat'] == 0)
+                {
+                    echo "Type d'expérience :". $ligne['type_exp']; 
+                    ?> <br/> <?php
+                    echo "Brève description de l'expérience :". $ligne['description_exp']; 
+                    ?> <br/> <?php
+                    echo "Durée de l'expérience :". $ligne['date_debut']." - ".$ligne['date_fin']; 
+                    ?> <br/> <?php
+                    echo "Salaire :". $ligne['salaire']; 
+                    ?> <br/> <?php
+                }
+               ?> </div> <?php
+            }
+        include_once "includes/footer.php";
+        ?>
 
-</html>
-<?php include_once "includes/footer.php"; ?>
