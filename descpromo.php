@@ -14,7 +14,7 @@
         foreach( $res as $ligne) 
             { $nom = $ligne['nom_eleve'] ; 
             $prenom = $ligne['prenom_eleve']?>
-            <a class="center" href="desceleve.php?nom_eleve=<?php echo "$nom"?>"><?php echo "$nom $prenom" ?></a><br/>
+            <a class="center" href="desceleve.php?nom_eleve=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom $prenom" ?></a><br/>
             <?php
             } 
 ?>
