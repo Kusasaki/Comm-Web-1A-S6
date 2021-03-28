@@ -35,6 +35,10 @@
                 }
                ?> </div> <?php
             }
-        include_once "includes/footer.php";
-        ?>
+
+	?>
+
+        <form name="x" action="addexp.php" method="post"><input type="submit" value="Ajouter une expérience"></form>
+
+        <?php include_once "includes/footer.php"; ?>
 
