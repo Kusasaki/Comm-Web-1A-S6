@@ -17,7 +17,9 @@
     margin-left:20px;
     margin-right: 20px;
 }
-
+.xp{
+    background-color: aliceblue;
+}
 .titre_rubrique{
     text-align: center;
 }
