@@ -53,7 +53,7 @@ session_start();
         (nom_utilisateur, mot_de_passe, id_eleve, id_gestionnaire)
         values (?,?,?,?)');
         $addacces->execute(array($prenom, $mdp, $idel, $idg));
-        redirect("index.php");
+        redirect("confDemande.php");
     }
 ?>
 
