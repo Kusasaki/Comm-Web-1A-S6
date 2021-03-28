@@ -88,3 +88,10 @@ function is_available($id_etat){
     $request -> execute(array($id_etat));
     return $request;
 }
+
+function get_utilisateur($user){
+    $request=getDB() -> prepare("SELECT nom_eleve, prenom_eleve FROM eleve, acces WHERE acces.id_eleve = eleve.id_eleve
+    AND acces.nom_utilisateur=?");
+    $request -> execute(array($user));
+    return $request;
+}
