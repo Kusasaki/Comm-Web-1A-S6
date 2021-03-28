@@ -56,7 +56,7 @@
         $eleve = get_xp($nom, $prenom);
         $res = $eleve->fetchAll();
         foreach( $res as $ligne) 
-            { ?> <div class="cadre"> <p class="titre_page">Expérience : </p> <?php
+            { ?> <div class="cadre xp"> <p class="titre_page">Expérience : </p> <?php
                 if ($ligne['etat'] == 0)
                 {
                     echo "Type d'expérience : ". $ligne['type_exp']; 
