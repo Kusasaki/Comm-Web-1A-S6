@@ -49,3 +49,18 @@ function redirect($url) {
 function escape($value) {
     return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', false);
 }
+
+// fonction permettantd de chercher dans la bd tous les élèves d'une promo
+function get_student_by_promo($promo){
+    /**
+     * Return specified columns for all movies
+     *
+     * @param Array   $columns  columns to retrieve
+     *
+     * @throws PDOException If specified columns are not in table movie
+     * @return Array $all_movies with all movies
+     */
+    $request = getDb() -> prepare("SELECT * FROM eleve WHERE annee=?");
+    $request->execute(array($promo));
+    return $request;
+}
