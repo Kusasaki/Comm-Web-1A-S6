@@ -64,3 +64,27 @@ function get_student_by_promo($promo){
     $request->execute(array($promo));
     return $request;
 }
+
+function get_info_from_eleve($nom, $prenom){
+    /**
+     * Return specified columns for all movies
+     *
+     * @param Array   $columns  columns to retrieve
+     *
+     * @throws PDOException If specified columns are not in table movie
+     * @return Array $all_movies with all movies
+     */
+    $request = getDb() -> prepare("SELECT * FROM eleve WHERE nom_eleve=? AND prenom_eleve=?");
+    $request->execute(array($nom,$prenom));
+    return $request;
+}
+function get_id_etat($nom, $prenom){
+    $request=getDB() -> prepare("SELECT id_etat FROM eleve WHERE nom_eleve=? AND prenom_eleve=?");
+    $request->execute(array($nom, $prenom));
+    return $request;
+}
+function is_available($id_etat){
+    $request = getDB() -> prepare("SELECT * FROM etat WHERE id_etat=?");
+    $request -> execute(array($id_etat));
+    return $request;
+}
