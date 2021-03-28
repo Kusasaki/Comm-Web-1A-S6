@@ -20,10 +20,9 @@
     </br>
     
         <?php 
-        
-        ?><div class="cadre"><?php
+
             foreach( $res as $ligne) 
-            { ?>  <p class="titre_page">Expérience : </p> <?php
+            { ?> <div class="cadre"> <p class="titre_page">Expérience : </p> <?php
                 
                     echo "Type d'expérience : ". $ligne['type_exp']; 
                     ?> <br/> <?php
@@ -52,8 +51,9 @@
                             echo "Téléphone : ". $ligne['telephone_organisation']; 
                             ?> <br/> <?php
                         }
+                    ?></div><br/><?php
                 }
-               ?> </div><br/>
+               ?> <br/>
 
             <form  name="x" action="addexp.php" method="post"><input class="ajouter" type="submit" value="Ajouter une expérience"></form>
             
