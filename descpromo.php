@@ -1,5 +1,7 @@
-<?php include_once "includes/head.php"; 
+<?php session_start();
+    include_once "includes/head.php"; 
     include_once "includes/header.php";
+    include_once "includes/functions.php";
     $promo = $_GET['promo'];
     $eleve = get_student_by_promo($promo);
 	$res = $eleve->fetchAll(); ?>
@@ -13,11 +15,20 @@
         
         foreach( $res as $ligne) 
             { $nom = $ligne['nom_eleve'] ; 
-            $prenom = $ligne['prenom_eleve']?>
-            <a class="center" href="desceleve.php?nom_eleve=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom $prenom" ?></a><br/>
-            <?php
+            $prenom = $ligne['prenom_eleve'];
+            if(isUserConnected()) { ?>
+                <a class="center" href="desceleve.php?nom=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom $prenom" ?></a><br/>
+        
+                <?php }else{?>
+                    <div class="titre_page"><?php
+                    echo "$nom $prenom";?>
+                    </br></div><?php
+                 } 
             } 
-?>
+    ?>
+    <div class="titre_page"> 
+        <br/>Vous ne pouvez pas aller sur la fiche des élèves, veuillez vous <a href="login.php">connecter</a> ou vous <a href="inscription.php">inscrire</a> ! <br/>
+        </div>
     </div>
 
 </html>
