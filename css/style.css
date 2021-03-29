@@ -35,3 +35,8 @@
 .center{
     margin-left: 45%;
 }
+
+button {
+    display: block;
+    margin : auto;
+}
