@@ -94,3 +94,19 @@ function get_organisation($id_organisation){
     $request -> execute(array($id_organisation));
     return $request;
 }
+//fonction permettant de savoir si c'est le gestionnaire qui est connecté
+function is_gest_connected(){
+    $request=getDB()->prepare("SELECT login_gestionnaire FROM gestionnaire");
+    $request->execute();
+    $res = $request->fetch();
+    if(isUserConnected()){
+        foreach ($res as $ligne){
+            if($_SESSION['login'] == $ligne) {$gest=true;}
+        }
+    }
+    else{
+            $gest =false;
+    }
+    
+    return $gest;
+}
