@@ -37,8 +37,25 @@
                         if ($ligne['etat'] == 0)echo "Etat : visible";
                         else echo "Etat : invisible";
                         
+                        $id_organisation=$ligne['id_organisation'];
+                    $organisation = get_organisation($id_organisation);
+                    $resu = $organisation->fetchAll();
+                    foreach( $resu as $ligne) 
+                        { ?> <p class="titre_page">Organisation : </p> <?php
+                            echo "Nom : ". $ligne['nom_organisation']; 
+                            ?> <br/> <?php
+                            echo "Type d'organisation : ". $ligne['type_organisation']; 
+                            ?> <br/> <?php 
+                            echo "Secteur d'activité : ". $ligne['secteur_activite']; 
+                            ?> <br/> <?php
+                            echo "Adresse : ". $ligne['ad_postale']." ".$ligne['code_postal_organisation']." ".$ligne['ville_organisation']; 
+                            ?> <br/> <?php
+                            echo "Téléphone : ". $ligne['telephone_organisation']; 
+                            ?> <br/> <?php
+                        }
                         ?>
-                        </div><br/>
+                        </div><br/><?php
+                    }?>
 
                         <form  name="modifierexp" action="modifierexp.php" method="post"><button type="submit">Modifier l'expérience</button><input type="hidden" name="id" value="<?= $ligne['id_exppro'] ?>" ></input></form><br/>
 
