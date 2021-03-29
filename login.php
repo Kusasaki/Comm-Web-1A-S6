@@ -5,15 +5,24 @@ session_start();
 if (!empty($_POST['user']) and !empty($_POST['pass'])) {
     $user = $_POST['user'];
     $pass= $_POST['pass'];
-    $stmt = getDb()->prepare('select * from acces where nom_utilisateur=? and mot_de_passe=?');
-    $stmt->execute(array($user, $pass));
-    if ($stmt->rowCount() == 1) {
+    $stmt1 = getDb()->prepare('select * from acces where nom_utilisateur=? and mot_de_passe=?');
+    $stmt1->execute(array($user, $pass));
+    if ($stmt1->rowCount() == 1) {
         // Authentication successful
         $_SESSION['login'] = $user;
         redirect("index.php");
     }
     else {
-        $error = "L'utilisateur ne semble pas exister.";
+        $stmt2 = getDb()->prepare('select * from gestionnaire where login_gestionnaire=? and mdp_gestionnaire=?');
+        $stmt2->execute(array($user, $pass));
+        if ($stmt2->rowCount() == 1) {
+            // Authentication successful
+            $_SESSION['login'] = $user;
+            redirect("index.php");
+        }
+        else{
+            $error = "L'utilisateur ne semble pas exister.";
+        }
     }
 }
 ?>
