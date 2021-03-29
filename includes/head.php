@@ -8,3 +8,4 @@
   <link rel ="stylesheet" href="css/style.css">
   <title>A La Recherche Du Patio Perdu</title>
 </head>
+</html>
