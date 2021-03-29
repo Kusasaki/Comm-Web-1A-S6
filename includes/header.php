@@ -18,8 +18,13 @@
         <li class="nav-item">
             <a class ="nav-link" href="searchpage.php" title="Recherche" class="">Recherche</a></li>
         <li class="nav-item">
-
-        <?php if(isUserConnected()) { ?>
+        <?php if(is_gest_connected()){?>
+            <li class="nav-item">
+            <a class ="nav-link" href="gest.php" title="Gestionnaire" class="">Demandes</a></li>
+            <a class ="nav-link" href="logout.php" title="Deconnexion" class="">Me déconnecter</a></li>
+        <?php }
+        else{
+        if(isUserConnected()) { ?>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bonjour !</a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -35,7 +40,8 @@
                 <a class ="nav-link" href="login.php" title="Se connecter" class="">Connexion</a></li>
                 <li class="nav-item">
                 <a class ="nav-link" href="inscription.php" title="Inscription" class="">Inscription</a></li>
-        <?php } ?>
+        <?php } 
+        }?>
     </ul>
 </nav>
 </div>
