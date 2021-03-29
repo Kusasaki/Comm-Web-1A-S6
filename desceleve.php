@@ -1,4 +1,6 @@
-<?php include_once "includes/head.php";
+<?php 
+    session_start();
+    include_once "includes/head.php";
     include_once "includes/functions.php";
     $nom = $_GET['nom'];
     $prenom = $_GET['prenom'];
@@ -29,22 +31,22 @@
                 ?> <br/> <?php
                 echo "Promotion : " .$ligne['annee'];
                 ?> <br/> <?php
-                if ($li['sexe']=0){
+                if ($li['sexe']=0 || is_gest_connected()){
                 echo "Sexe : " .$ligne['sexe'];
                 }
                 ?> <br/> <?php
                 echo "Date de naissance : " .$ligne['date_naissance'];
                 ?> <br/><p class="titre_page">On peut le contacter comment ? </p> <?php
-                if ($li['telephone']=0){
+                if ($li['telephone']=0 || is_gest_connected()){
                     echo "Téléphone : " .$ligne['telephone_eleve'];
                 }
                 ?> <br/> <?php
-                if ($li['ad_mail']=0){
+                if ($li['ad_mail']=0 || is_gest_connected()){
                 echo "Adresse mail : " .$ligne['ad_mail'];
                 }
                 else echo "Cette information est indisponible";
                 ?> <br/> <p class="titre_page">Où il habite ? </p><?php
-                if ($li['ad_postale']=0){
+                if ($li['ad_postale']=0 || is_gest_connected()){
                 echo "Adresse : " .$ligne['ad_postale']." ".$ligne['code_postal']." ".$ligne['ville'];
                 }
                 else echo "Cette information est indisponible";
@@ -57,7 +59,7 @@
         $res = $eleve->fetchAll();
         foreach( $res as $ligne) 
             { ?> <div class="cadre xp"> <p class="titre_page">Expérience : </p> <?php
-                if ($ligne['etat'] == 0)
+                if ($ligne['etat'] == 0 || is_gest_connected())
                 {
                     echo "Type d'expérience : ". $ligne['type_exp']; 
                     ?> <br/> <?php
@@ -90,7 +92,6 @@
 
     </div>
     <br/>
-    <p class="titre_page">Ses expériences : </p>
     
 
 </html>
