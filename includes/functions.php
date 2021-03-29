@@ -101,12 +101,10 @@ function is_gest_connected(){
     $res = $request->fetch();
     if(isUserConnected()){
         foreach ($res as $ligne){
-            if($_SESSION['login'] == $ligne) {$gest=true;}
+            if($_SESSION['login'] == $ligne) {return true;}
         }
     }
     else{
-            $gest =false;
+            return false;
     }
-    
-    return $gest;
 }
