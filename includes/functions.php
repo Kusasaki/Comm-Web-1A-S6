@@ -100,3 +100,8 @@ function get_utilisateur($user){
     $request -> execute(array($user));
     return $request;
 }
+function get_organisation($id_organisation){
+    $request=getDB() -> prepare("SELECT * FROM organisation WHERE id_organisation=?");
+    $request -> execute(array($id_organisation));
+    return $request;
+}
