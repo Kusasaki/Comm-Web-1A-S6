@@ -8,7 +8,7 @@
 	<div>
 		<h1 class="titre_page">Bienvenue sur A La Recherche Du Patio Perdu !</h1>
 		<h3 class="soustitre">Le site qui vous permet de retrouver les anciens de l'ENSC et une ambiance aussi chaleureuse que celle du patio</h3>        
-    	</div>
+    	</div><br/>
 <!--Carousel d'image-->
 	    <div id="carouselExampleIndicators" class="carousel slide divCarousel" data-ride="carousel">
 		  <ol class="carousel-indicators">
