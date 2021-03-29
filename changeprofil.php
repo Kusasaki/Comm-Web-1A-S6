@@ -60,12 +60,14 @@
 
             $req = getDB()->prepare("UPDATE etat
             SET telephone_eleve =:telephone_eleve, sexe=:sexe, ad_mail=:ad_mail, ad_postale=:ad_postale,
-            code_postal =:code_postal, ville=:ville");
+            code_postal =:code_postal, ville=:ville
+            WHERE id_etat=:id_etat");
 
             if(isset($_POST['secuAd'])){$lasecuLieu = 1;} else{$lasecuLieu = 0;}
             if(isset($_POST['secuMail'])){$lasecuMail = 1;} else{$lasecuMail = 0;}
             if(isset($_POST['secuTel'])){$lasecuTel = 1;} else{$lasecuTel = 0;}
             if(isset($_POST['secuGenre'])){$lasecuGenre = 1;} else{$lasecuGenre = 0;}
+            $lidetat = $id_etat['id_etat'];
 
             $req->bindValue('telephone_eleve',$lasecuTel ,PDO::PARAM_INT );
             $req->bindValue('sexe',$lasecuGenre ,PDO::PARAM_INT ); 
@@ -73,6 +75,7 @@
             $req->bindValue('ad_postale',$lasecuLieu ,PDO::PARAM_INT ); 
             $req->bindValue('code_postal',$lasecuLieu ,PDO::PARAM_INT ); 
             $req->bindValue('ville',$lasecuLieu ,PDO::PARAM_INT ); 
+            $req->bindvalue('id_etat', $lidetat, PDO::PARAM_INT );
 
             $req->execute();
 
