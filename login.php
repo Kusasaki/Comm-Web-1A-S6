@@ -7,10 +7,15 @@ if (!empty($_POST['user']) and !empty($_POST['pass'])) {
     $pass= $_POST['pass'];
     $stmt1 = getDb()->prepare('select * from acces where nom_utilisateur=? and mot_de_passe=?');
     $stmt1->execute(array($user, $pass));
+    $res = $stmt1->fetch();
     if ($stmt1->rowCount() == 1) {
         // Authentication successful
-        $_SESSION['login'] = $user;
-        redirect("index.php");
+        
+        if($res['valide'] == 0){
+            $_SESSION['login'] = $user;
+            redirect("index.php");
+        }
+        
     }
     else {
         $stmt2 = getDb()->prepare('select * from gestionnaire where login_gestionnaire=? and mdp_gestionnaire=?');
@@ -51,7 +56,7 @@ require_once "includes/head.php";
             <form class="form-signin form-horizontal" role="form" action="login.php" method="post">
                 <div class="form-group">
                     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                    <input type="text" name="user" class="form-control" placeholder="Entrez votre identifiant" required autofocus>
+                    <input type="text" name="user" class="form-control" placeholder="Entrez votre adresse mail" required autofocus>
                     </div>
                 </div>
                 <div class="form-group">
