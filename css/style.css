@@ -6,8 +6,8 @@
 #carouselExampleIndicators{
     height: 25%;
     width:60%;
-    Margin : auto;
-    Display:flex;
+    margin : auto;
+    display:flex;
 }
 .cadre {
     border-width:2px;
@@ -29,9 +29,10 @@
 }
 
 .navbar{
-    Margin:auto;
-    Display: flex;
+    margin:auto;
+    display: flex;
 }
+
 .center{
     margin-left: 45%;
 }
