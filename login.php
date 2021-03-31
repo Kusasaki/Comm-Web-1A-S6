@@ -52,23 +52,27 @@ require_once "includes/head.php";
             </div>
         <?php } ?>
 
-        <div class="well">
+        <div class="cadre">
             <form class="form-signin form-horizontal" role="form" action="login.php" method="post">
-                <div class="form-group">
+                <br/>
+                <div class="d-flex justify-content-center">
                     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                     <input type="text" name="user" class="form-control" placeholder="Entrez votre adresse mail" required autofocus>
                     </div>
                 </div>
-                <div class="form-group">
+                <br/>
+                <div class="d-flex justify-content-center">
                     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                         <input type="password" name="pass" class="form-control" placeholder="Entrez votre mot de passe" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                        <button type="submit" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button>
+                <br/>
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <button type="submit" class="btn btn-default btn-primary "><span class="glyphicon glyphicon-log-in"></span> Se connecter</button>
                     </div>
                 </div>
+                <br/>
             </form>
         </div>
 
