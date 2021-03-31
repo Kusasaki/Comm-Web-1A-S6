@@ -75,13 +75,13 @@
 <html>
     <body>
     	<?php include_once "includes/header.php";?>
-        <form method="POST" action="modifierexp.php" role="form">
+        <form method="POST" action="modifierexp.php" role="form" class="cadre">
 
             <input type="hidden" name="idxp" value="<?= $_POST['id'] ?>" ></input>
 
         	<fieldset class="titre_page"><legend>L'expérience</legend>
 
-	        <p><input type="text" name="typeexp" id="type" placeholder="Type d'expérience" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="typeexp" id="type" placeholder="Type d'expérience" size="30" maxlength="30" /></p>
 
             <p><input type="text" name="dateDeb" id="dateDeb" placeholder="Date de début : AAAA-MM-JJ" size="30" maxlength="10" /></p>
 
@@ -94,17 +94,17 @@
 			<hr/>
 			<fieldset class="titre_page"><legend>Organisation</legend>
 
-			<p><input type="text" name="nomorga" id="nomorga" placeholder="Nom" size="30" maxlength="10" /></p>
+			<p><input type="text" name="nomorga" id="nomorga" placeholder="Nom" size="30" maxlength="20" /></p>
 
-            <p><input type="text" name="typeorga" id="typeorga" placeholder="Type d'organisation" size="30" maxlength="10" /></p>
+            <p><input type="text" name="typeorga" id="typeorga" placeholder="Type d'organisation" size="30" maxlength="50" /></p>
 
-            <p><input type="text" name="secteur" id="secteur" placeholder="Secteur d'activité" size="30" maxlength="10" /></p>
+            <p><input type="text" name="secteur" id="secteur" placeholder="Secteur d'activité" size="30" maxlength="50" /></p>
 
-            <p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="10" /></p>
+            <p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="50" /></p>
 
-            <p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="10" /></p>
+            <p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="50" /></p>
 
-            <p><input type="text" name="ville" id="ville" placeholder="Ville" size="30" maxlength="10" /></p></fieldset>
+            <p><input type="text" name="ville" id="ville" placeholder="Ville" size="30" maxlength="50" /></p></fieldset>
 
 			<hr/>
 			<fieldset class="titre_page"><legend>Confidentialité</legend>
@@ -114,9 +114,15 @@
             <span class="slider round">Je veux que ces informations restent privées</span>
 			</label> </fieldset>
 
-  			<input type="button" class="btn btn-default btn-primary" value="Retour" onclick="history.go(-1)">
-			<input type="submit" class="btn btn-default btn-primary" value="Valider">
+  			<div class="d-flex justify-content-around">
+                <input type="button" class="btn btn-default btn-primary" value="Retour" onclick="history.go(-1)">
+                <input type="submit" class="btn btn-default btn-primary" value="Valider">
+            </div>
+            <br/>
 
         </form>
     </body>
 </html>
+<?php
+include_once 'includes/footer.php';
+?>
