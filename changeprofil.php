@@ -81,4 +81,3 @@
 
             redirect('profil.php');
         }
-        
