@@ -60,34 +60,34 @@ session_start();
 <html>
     <body>
     	<?php include_once "includes/header.php";?>
-        <form method="POST" action="addexp.php" role="form">
+        <form method="POST" action="addexp.php" role="form" class="cadre">
 
         	<fieldset class="titre_page"><legend>L'expérience</legend>
 
-	        <p><input type="text" name="typeexp" id="type" placeholder="Type d'expérience" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="typeexp" id="type" placeholder="Type d'expérience" size="30" maxlength="20" /></p>
 
-	        <p><input type="text" name="dateDeb" id="dateDeb" placeholder="Date de début : AAAA-MM-JJ" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="dateDeb" id="dateDeb" placeholder="Date de début : AAAA-MM-JJ" size="30" maxlength="20" /></p>
 
-	        <p><input type="text" name="dateFin" id="dateFin" placeholder="Date de fin : AAAA-MM-JJ" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="dateFin" id="dateFin" placeholder="Date de fin : AAAA-MM-JJ" size="30" maxlength="20" /></p>
 
-	        <p><input type="text" name="salaire" id="salaire" placeholder="Salaire" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="salaire" id="salaire" placeholder="Salaire" size="30" maxlength="30" /></p>
 
-			<p><input type="longtext" name="descexp" id="descexp" placeholder="Descrption de l'expérience" size="100" maxlength="50" /></p></fieldset>
+			<p><input type="longtext" name="descexp" id="descexp" placeholder="Descrption de l'expérience" size="100" maxlength="1000" /></p></fieldset>
 
 			<hr/>
 			<fieldset class="titre_page"><legend>Organisation</legend>
 
-			<p><input type="text" name="nomorga" id="nomorga" placeholder="Nom" size="30" maxlength="10" /></p>
+			<p><input type="text" name="nomorga" id="nomorga" placeholder="Nom" size="30" maxlength="50" /></p>
 
-			<p><input type="text" name="typeorga" id="typeorga" placeholder="Type d'organisation" size="30" maxlength="10" /></p>
+			<p><input type="text" name="typeorga" id="typeorga" placeholder="Type d'organisation" size="30" maxlength="50" /></p>
 
-			<p><input type="text" name="secteur" id="secteur" placeholder="Secteur d'activité" size="30" maxlength="10" /></p>
+			<p><input type="text" name="secteur" id="secteur" placeholder="Secteur d'activité" size="30" maxlength="50" /></p>
 
-			<p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="10" /></p>
+			<p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="50" /></p>
 
-			<p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="10" /></p>
+			<p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="50" /></p>
 
-			<p><input type="text" name="ville" id="ville" placeholder="Ville" size="30" maxlength="10" /></p></fieldset>
+			<p><input type="text" name="ville" id="ville" placeholder="Ville" size="30" maxlength="50" /></p></fieldset>
 
 			<hr/>
 			<fieldset class="titre_page"><legend>Confidentialité</legend>
@@ -97,9 +97,16 @@ session_start();
             <span class="slider round">Je veux que ces informations restent privées</span>
 			</label> </fieldset>
 
-  			<input type="button" class="btn btn-default btn-primary" value="Retour" onclick="history.go(-1)">
-			<input type="submit" class="btn btn-default btn-primary" value="Valider">
+            <hr/>
 
+            <div class="d-flex justify-content-around">
+      			<input type="button" class="btn btn-default btn-primary" value="Retour" onclick="history.go(-1)">
+    			<input type="submit" class="btn btn-default btn-primary" value="Valider">
+            </div>
+            <br/>
         </form>
     </body>
 </html>
+<?php
+include_once 'includes/footer.php';
+?>
