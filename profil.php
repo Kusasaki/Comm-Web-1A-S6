@@ -79,9 +79,12 @@
 			<span class="slider round">Je veux que cette info reste privée</span>
             </label> </fieldset>
             
+            <hr/>
 
-  			<input type="button" class="btn btn-default btn-primary" value="Retour" href="profil.php">
-			<button type="submit" class="btn btn-default btn-primary">Valider</button>
+    		<div class="d-flex justify-content-around">
+            <input type="button" class="btn btn-default btn-primary" value="Retour" onclick="history.go(-1)">
+            <input type="submit" class="btn btn-default btn-primary" value="Valider">
+        </div>
             <br/><br/>
         </div>
         </form>
@@ -150,7 +153,7 @@
         <a href="mesexp.php">Mes expériences</a> 
         </div>
         <br/> 
-        <form  name="x" action="profil.php?update=true&nom=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>" method="post"><input class="ajouter" type="submit" value="Modifier mon profil"></form>
+        <form  name="x" action="profil.php?update=true&nom=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>" method="post"><input style="display:block; margin:auto;" type="submit" value="Modifier mon profil"></form><br/>
         
 
     <?php } ?>
