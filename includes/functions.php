@@ -13,7 +13,7 @@ function getDb() {
     //Planethoster
     $server = "localhost";
     $username = "alarunru_admin";
-    $password = "20ensc23";
+    $password = "20kaonashi23";
     $db = "alarunru_anciens";
     return new PDO("mysql:host=$server;dbname=$db;charset=utf8", "$username", "$password",
     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
