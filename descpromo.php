@@ -28,7 +28,7 @@
 		    </div> <?php
                  } 
             } 
-    ?>
+?> </div>
 
 </html>
 <?php include_once "includes/footer.php"; ?>
