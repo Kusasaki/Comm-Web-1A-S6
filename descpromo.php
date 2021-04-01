@@ -19,8 +19,7 @@
                 <a class="center" href="desceleve.php?nom=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom $prenom" ?></a><br/>
         
                 <?php }else{?>
-                    <div class="titre_page"><?php
-                    echo "$nom $prenom";?>
+                    <div class="titre_page">
                     </br></div> <?php
                  } 
             }
