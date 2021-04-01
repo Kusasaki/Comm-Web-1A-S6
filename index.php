@@ -1,6 +1,8 @@
-<?php include_once "includes/head.php";
-    include_once "includes/functions.php";
-    session_start();?>
+<?php 
+session_start();
+include_once "includes/head.php";
+include_once "includes/functions.php";
+?>
 
 <html>
     <body>
