@@ -1,8 +1,3 @@
-<?php
-    include_once "head.php";
-    include_once "functions.php";?>
-
-
 <body>
 <div class="container">
 <div class="row mb-5">
