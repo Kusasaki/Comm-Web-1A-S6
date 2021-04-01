@@ -25,7 +25,7 @@
         {
             foreach( $res as $ligne) 
             { 
-                echo "Nom :". $ligne['nom_eleve']; 
+                echo "Nom : " .$ligne['nom_eleve']; 
                 ?> <br/> <?php
                 echo "Prenom : " .$ligne['prenom_eleve'];
                 ?> <br/> <?php
@@ -36,7 +36,7 @@
                 }
                 ?> <br/> <?php
                 echo "Date de naissance : " .$ligne['date_naissance'];
-                ?> <br/><p class="titre_page">On peut le contacter comment ? </p> <?php
+                ?> <br/><p class="titre_page">On peut le/la contacter comment ? </p> <?php
                 if ($li['telephone']=0 || is_gest_connected()){
                     echo "Téléphone : " .$ligne['telephone_eleve'];
                 }
@@ -45,12 +45,12 @@
                 echo "Adresse mail : " .$ligne['ad_mail'];
                 }
                 else echo "Cette information est indisponible";
-                ?> <br/> <p class="titre_page">Où il habite ? </p><?php
+                ?> <br/> <p class="titre_page">Où il/elle habite ? </p><?php
                 if ($li['ad_postale']=0 || is_gest_connected()){
                 echo "Adresse : " .$ligne['ad_postale']." ".$ligne['code_postal']." ".$ligne['ville'];
                 }
                 else echo "Cette information est indisponible";
-                ?> <br/> <p class="titre_page">Il a fait quoi ? </p><?php
+                ?> <br/> <p class="titre_page">Il/elle a fait quoi ? </p><?php
                 
             } 
         }
