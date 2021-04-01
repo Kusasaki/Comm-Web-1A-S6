@@ -11,8 +11,8 @@ function getDb() {
     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));*/
 
     //Planethoster
-    $server = "ftp.a-la-recherche-du-patio-perdu.planethoster.world";
-    $username = "alarunru";
+    $server = "localhost";
+    $username = "alarunru_admin";
     $password = "20ensc23";
     $db = "alarunru_anciens";
     return new PDO("mysql:host=$server;dbname=$db;charset=utf8", "$username", "$password",
