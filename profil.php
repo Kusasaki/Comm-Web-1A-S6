@@ -37,9 +37,9 @@ include_once "includes/functions.php";
 
         	<fieldset class="titre_page"><legend>Informations Personnelles</legend>
 
-	        <p><input type="text" name="dateNaissance" id="da" placeholder="AAAA-MM-JJ" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="dateNaissance" id="da" placeholder="AAAA-MM-JJ" size="30" maxlength="50" /></p>
 
-	        <p><input type="text" name="promotion" id="promo" placeholder="AAAA" size="30" maxlength="10" /></p>
+	        <p><input type="text" name="promotion" id="promo" placeholder="AAAA" size="30" maxlength="50" /></p>
 
 	        <p>
 	        <select name="genre" id="genre">
@@ -56,13 +56,13 @@ include_once "includes/functions.php";
             <hr/>
 			<fieldset class="titre_page"><legend>Contact</legend>
 
-			<p><input type="text" name="tel" id="tel" placeholder="N° de téléphone" size="30" maxlength="10" /></p>
+			<p><input type="text" name="tel" id="tel" placeholder="N° de téléphone" size="30" maxlength="50" /></p>
 			<label class="switch">
 			<input type="checkbox" name="secuTel">
 			<span class="slider round">Je veux que cette info reste privée</span>
 			</label>
 
-			<p><input type="text" name="mail" id="mail" placeholder="Adresse mail" size="30" maxlength="10" /></p>
+			<p><input type="text" name="mail" id="mail" placeholder="Adresse mail" size="30" maxlength="50" /></p>
 			<label class="switch" >
 			<input type="checkbox" name="secuMail">
 			<span class="slider round">Je veux que cette info reste privée</span>
@@ -72,9 +72,9 @@ include_once "includes/functions.php";
 			<fieldset class="titre_page"><legend>Adresse</legend>
 
 			<label for="poste">Adresse postale : </label><br/>
-			<p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="10" /></p>
-			<p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="10" /></p>
-			<p><input type="text" name="ville" id="ville" placeholder="Nom de la ville" size="30" maxlength="10" /></p>
+			<p><input type="text" name="rue" id="rue" placeholder="N°, rue" size="30" maxlength="50" /></p>
+			<p><input type="text" name="codeP" id="codeP" placeholder="Code postal" size="30" maxlength="50" /></p>
+			<p><input type="text" name="ville" id="ville" placeholder="Nom de la ville" size="30" maxlength=50" /></p>
 
 			<label class="switch" >
 			<input type="checkbox" name="secuAd">
