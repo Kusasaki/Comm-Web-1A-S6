@@ -42,17 +42,17 @@
             $laville=$_POST['ville']; 
             
     
-            $requete->bindValue('nom_eleve',$nom , PDO::PARAM_STR ); 
-            $requete->bindValue('prenom_eleve',$prenom , PDO::PARAM_STR ); 
+            $requete->bindValue('nom_eleve',$nom); 
+            $requete->bindValue('prenom_eleve',$prenom); 
     
-            $requete->bindValue('date_naissance',$ladate ,PDO::PARAM_INT ); 
-            $requete->bindValue('annee',$lannee ,PDO::PARAM_INT ); 
-            $requete->bindValue('sexe',$legenre ,PDO::PARAM_INT ); 
-            $requete->bindValue('telephone_eleve',$letel ,PDO::PARAM_INT ); 
-            $requete->bindValue('ad_mail',$lemail ,PDO::PARAM_STR ); 
-            $requete->bindValue('ad_postale',$larue ,PDO::PARAM_STR ); 
-            $requete->bindValue('code_postal',$lecode ,PDO::PARAM_INT ); 
-            $requete->bindValue('ville',$laville ,PDO::PARAM_STR ); 
+            $requete->bindValue('date_naissance',$ladate); 
+            $requete->bindValue('annee',$lannee); 
+            $requete->bindValue('sexe',$legenre); 
+            $requete->bindValue('telephone_eleve',$letel); 
+            $requete->bindValue('ad_mail',$lemail); 
+            $requete->bindValue('ad_postale',$larue); 
+            $requete->bindValue('code_postal',$lecode); 
+            $requete->bindValue('ville',$laville); 
             
     
             $requete->execute();
