@@ -68,13 +68,13 @@
             if(isset($_POST['secuGenre'])){$lasecuGenre = 1;} else{$lasecuGenre = 0;}
             $lidetat = $id_etat['id_etat'];
 
-            $req->bindValue('telephone_eleve',$lasecuTel ,PDO::PARAM_INT );
-            $req->bindValue('sexe',$lasecuGenre ,PDO::PARAM_INT ); 
-            $req->bindValue('ad_mail',$lasecuMail ,PDO::PARAM_INT ); 
-            $req->bindValue('ad_postale',$lasecuLieu ,PDO::PARAM_INT ); 
-            $req->bindValue('code_postal',$lasecuLieu ,PDO::PARAM_INT ); 
-            $req->bindValue('ville',$lasecuLieu ,PDO::PARAM_INT ); 
-            $req->bindvalue('id_etat', $lidetat, PDO::PARAM_INT );
+            $req->bindValue('telephone_eleve',$lasecuTel);
+            $req->bindValue('sexe',$lasecuGenre); 
+            $req->bindValue('ad_mail',$lasecuMail); 
+            $req->bindValue('ad_postale',$lasecuLieu); 
+            $req->bindValue('code_postal',$lasecuLieu); 
+            $req->bindValue('ville',$lasecuLieu); 
+            $req->bindvalue('id_etat', $lidetat);
 
             $req->execute();
 
