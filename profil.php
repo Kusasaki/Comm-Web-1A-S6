@@ -101,7 +101,7 @@ include_once "includes/functions.php";
         {
             foreach( $res as $ligne) 
             { 
-                echo "Nom :" . $ligne['nom_eleve']; 
+                echo "Nom : " .$ligne['nom_eleve']; 
                 ?> <br/> <?php
                 echo "Prenom : " .$ligne['prenom_eleve'];
                 ?> <br/> <?php
