@@ -23,7 +23,7 @@ include_once "includes/functions.php";
       </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/promo/promo2008_Varela.JPEG" alt="Card image cap">
+    <img class="card-img-top" src="images/promo/promo2008_Varela.jpeg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Promotion 2008</h5>
       <p class="card-text">Promotion Varela</p>
@@ -103,7 +103,7 @@ include_once "includes/functions.php";
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/promo/promo2016_Shannon.JPEG" alt="Card image cap">
+    <img class="card-img-top" src="images/promo/promo2016_Shannon.jpeg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Promotion 2016</h5>
       <p class="card-text">Promotion Shannon</p>
