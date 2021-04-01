@@ -52,8 +52,6 @@ include_once "includes/functions.php";
                             ?> <br/> <?php
                             echo "Adresse : ". $ligne['ad_postale']." ".$ligne['code_postal_organisation']." ".$ligne['ville_organisation']; 
                             ?> <br/> <?php
-                            echo "Téléphone : ". $ligne['telephone_organisation']; 
-                            ?> <br/> <?php
                         }
                         ?>
                         </div><br/>
