@@ -57,8 +57,9 @@
             ?>
             <h4 class="titre_rubrique">Résultat de la recherche "<?php echo "$valeur"?>"</h4>
             <?php
-            $info = get_info_from_organisation($attribut, $valeur);
-            $res = $info->fetchAll();
+            $request = getDB()->prepare("SELECT * FROM organisation WHERE nom_organisation=?");
+            $request -> execute(array($valeur));
+            $res = $request->fetchAll();
         }
         if($attribut == "ville_organisation"){
             ?>
@@ -83,6 +84,41 @@
                 ?> <br/> <?php
                 echo "Téléphone : ". $ligne['telephone_organisation']; 
                 ?> <br/></div><br/> <?php
+
+                $requestExp=getDB()->prepare("SELECT * FROM experiencepro WHERE id_organisation =? AND etat = 0");
+                $requestExp->execute(array($ligne['id_organisation']));
+                $res = $requestExp->fetchAll();
+                ?>
+                <h5 class = "titre_rubrique">Expériences des anciens de l'ENSC</h5>
+                </br>
+                <!-- Afficher les expériences liées à cette organisation-->
+                <?php
+                foreach($res as $ligne){
+                    ?>
+                    <div class="cadre">
+                    <?php
+                    echo "Description de l'expérience : ". $ligne['description_exp']; 
+                    ?> <br/> <?php
+                    echo "Durée de l'expérience : ". $ligne['date_debut']." - ".$ligne['date_fin']; 
+                    ?> <br/> <?php
+                    echo "Salaire : ". $ligne['salaire']; 
+                    ?> <br/><br/><?php
+                    //Cherche la personne ayant réalisé cette expérience et propose d'aller voir son profil
+                    $request = getDb() -> prepare("SELECT nom_eleve, prenom_eleve FROM eleve WHERE id_eleve=?");
+                    $request->execute(array($ligne['id_eleve']));
+                    $resEleve = $request->fetch();
+                    $nom = $resEleve['nom_eleve'];
+                    $prenom = $resEleve['prenom_eleve'];
+                    $red="desceleve.php?nom=".$nom."&prenom=".$prenom;
+                    ?>
+                    Personne ayant réalisé cette expérience : <?php echo "$prenom $nom"?>
+                    <br/>
+                    <a href="<?php echo"$red"?>">Voir le profil de <?php echo "$prenom $nom"?></a>
+                    <?php
+                    ?></div><br/><?php
+                }
+                if($requestExp->rowCount() == 0) {echo "Personne n'a souhaité partager son expérience";}
+
             }
         }
     }
