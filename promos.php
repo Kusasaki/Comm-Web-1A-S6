@@ -16,7 +16,7 @@ include_once "includes/functions.php";
   <img class="card-img-top" src="images/promo/promo2007_DeVinci.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Promotion 2007</h5>
-      <p class="card-text">Voir les élèves de la promotion De Vinci</p>
+      <p class="card-text">Promotion De Vinci</p>
       <div class="card-footer">
         <a href ="descpromo.php?promo=2007">Voir la promotion 2007</a>
       </div>
