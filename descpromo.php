@@ -1,12 +1,11 @@
 <?php session_start();
     include_once "includes/head.php"; 
-    include_once "includes/header.php";
     include_once "includes/functions.php";
     $promo = $_GET['promo'];
     $eleve = get_student_by_promo($promo);
 	$res = $eleve->fetchAll(); ?>
 <html>
-    
+    <?php include_once "includes/header.php"; ?>
     <h2 class="titre_page">La promotion <?php echo "$promo"; ?></h2>
     </br>
     <p class="titre_page"> Les élèves de la promo :</p>
