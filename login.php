@@ -1,6 +1,5 @@
 <?php 
 session_start();
-include_once "includes/head.php";
 include_once "includes/functions.php";
 
 if (!empty($_POST['user']) and !empty($_POST['pass'])) {
