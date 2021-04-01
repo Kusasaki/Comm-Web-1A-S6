@@ -21,14 +21,14 @@
                 <?php }else{?>
                     <div class="titre_page"><?php
                     echo "$nom $prenom";?>
-                    </br></div><?php
+                    </br></div>
+		    <div class="titre_page"> 
+			<br/>Vous ne pouvez pas aller sur la fiche des élèves, veuillez vous <a href="login.php">connecter</a> ou vous <a href="inscription.php">inscrire</a> ! <br/>
+			</div>
+		    </div> <?php
                  } 
             } 
     ?>
-    <div class="titre_page"> 
-        <br/>Vous ne pouvez pas aller sur la fiche des élèves, veuillez vous <a href="login.php">connecter</a> ou vous <a href="inscription.php">inscrire</a> ! <br/>
-        </div>
-    </div>
 
 </html>
 <?php include_once "includes/footer.php"; ?>
