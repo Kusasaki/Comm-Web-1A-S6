@@ -59,4 +59,5 @@ include_once "includes/functions.php";
 <html>
 <?php
 include_once 'includes/footer.php';
+include_once 'includes/scripts.php';
 ?>
