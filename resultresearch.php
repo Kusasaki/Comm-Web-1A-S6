@@ -1,27 +1,11 @@
 <?php session_start();
-    include_once "includes/functions.php"; 
+    include_once "includes/functions.php";
+    include_once "includes/head.php";
+    include_once "includes/header.php";
     $table = $_GET['table'];
     $attribut = $_GET['attribut'];
     $valeur = $_GET['valeur'];
-    
-    //recherche d'une promo
-    if($table == "promotion"){
-        $red = "descpromo.php?promo=".$valeur;
-        echo "<meta http-equiv="refresh" content ="0;URL=index.php">";
-    }
 
-//recherche d'un élève
-    if($table == "eleve"){
-        $request = getDb() -> prepare("SELECT prenom_eleve FROM eleve WHERE nom_eleve=?");
-        $request->execute(array($valeur));
-        $res = $request->fetch();
-        $prenom = $res['prenom_eleve'];
-        $red="desceleve.php?nom=".$valeur."&prenom=".$prenom;
-        redirect($red);
-    }
-
-    include_once "includes/head.php";
-    include_once "includes/header.php"; 
 
 //recherche type d'expérience
     if($table=="experiencepro"){
