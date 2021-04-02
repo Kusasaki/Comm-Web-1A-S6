@@ -7,7 +7,7 @@ include_once "includes/functions.php";
     	$nomorga = escape($_POST['nomorga']);
 
     	// on vérifie si l'organisation est dans la table
-		$verif  = getDb()->prepare('select * from organisation where nom_organisation = ?');
+	$verif  = getDb()->prepare('select * from organisation where nom_organisation = ?');
     	$verif->execute(array($nomorga));
     	if ($verif->rowCount() == 0) {
 			$nomorga = escape($_POST['nomorga']);
