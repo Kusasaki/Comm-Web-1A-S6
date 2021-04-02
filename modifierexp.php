@@ -14,7 +14,6 @@ include_once "includes/functions.php";
         if (($_POST['nomorga']) != "") {
             $verif  = getDb()->prepare('select * from organisation where nom_organisation = ?');
             $verif->execute(array($nomorga));
-            print_r($verif->fetchAll());
             if ($verif->rowCount() == 0) {
                 $typeorga = escape($_POST['typeorga']);
                 $secteur = escape($_POST['secteur']);
@@ -26,6 +25,13 @@ include_once "includes/functions.php";
                 (nom_organisation, type_organisation, secteur_activite, ad_postale, code_postal_organisation, ville_organisation)
                 values (?,?,?,?,?,?)');
                 $addorga->execute(array($nomorga, $typeorga, $secteur, $rue, $codeP, $ville));
+		    
+		$getidor  = getDb()->prepare('select id_organisation from organisation where nom_organisation = ?');
+                $getidor->execute(array($nomorga));
+                $idor = $getidor->fetch();
+                $idor = $idor['id_organisation'];    
+		$upnom  = getDb()->prepare('update experiencepro set id_organisation = ? where id_exppro = ?');
+                $upnom->execute(array($idor, $id));
             }
             else{
                 $getidor  = getDb()->prepare('select id_organisation from organisation where nom_organisation = ?');
@@ -63,6 +69,11 @@ include_once "includes/functions.php";
         $updesc  = getDb()->prepare('update experiencepro set description_exp = ? where id_exppro = ?');
         $updesc->execute(array($descexp, $id));}
 
+        if(isset($_POST["secu"])){$secu = 1;} else{$secu = 0;}
+
+        $upsecu  = getDb()->prepare('update experiencepro set etat = ? where id_exppro = ?');
+        $upsecu->execute(array($secu, $id));
+	    
         if(isset($_POST["secu"])){$secu = 1;} else{$secu = 0;}
 
         $upsecu  = getDb()->prepare('update experiencepro set etat = ? where id_exppro = ?');
