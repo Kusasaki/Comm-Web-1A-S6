@@ -1,7 +1,8 @@
 <?php session_start();
+
+    include_once "includes/functions.php";
     include_once "includes/head.php"; 
     include_once "includes/header.php";
-    include_once "includes/functions.php";
     
 
     $request=getDB() -> prepare("SELECT * FROM eleve, acces WHERE acces.id_eleve = eleve.id_eleve
