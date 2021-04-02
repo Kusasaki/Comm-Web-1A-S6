@@ -1,4 +1,5 @@
 <?php session_start();
+    include_once "includes/head.php";
     include_once "includes/header.php"; 
     $table = $_GET['table'];
     $attribut = $_GET['attribut'];
@@ -42,8 +43,9 @@
         if($request->rowCount() == 0) {echo "Personne n'a souhaité partager son expérience";}
     }
 
-//recherche secteur activité
+//recherche par propriétés liées à la table organisation
     if($table == "organisation"){
+        // recherche par secteur d'activité
         if($attribut == "secteur_activite"){
         ?>
         <h4 class="titre_rubrique">Résultat de la recherche "<?php echo "$valeur"?>"</h4>
@@ -52,6 +54,7 @@
         $request->execute(array($valeur));
         $res = $request->fetchAll();
         } 
+        //recherche par nom
         if($attribut == "nom_organisation"){
             ?>
             <h4 class="titre_rubrique">Résultat de la recherche "<?php echo "$valeur"?>"</h4>
@@ -60,6 +63,7 @@
             $request -> execute(array($valeur));
             $res = $request->fetchAll();
         }
+        //recherche par ville
         if($attribut == "ville_organisation"){
             ?>
             <h4 class="titre_rubrique">Résultat de la recherche "<?php echo "$valeur"?>"</h4>
@@ -68,7 +72,9 @@
             $request->execute(array($valeur));
             $res = $request->fetchAll();
         }
+ //affichage des informations : 
         if (isset($res)){
+            //affiche organisation
             foreach($res as $ligne) 
             { ?>
                 <div class="cadre">
@@ -83,7 +89,8 @@
                 ?> <br/> <?php
                 echo "Téléphone : ". $ligne['telephone_organisation']; 
                 ?> <br/></div><br/> <?php
-
+                   
+                //affiche les infos des expériences professionnelles
                 $requestExp=getDB()->prepare("SELECT * FROM experiencepro WHERE id_organisation =? AND etat = 0");
                 $requestExp->execute(array($ligne['id_organisation']));
                 $res = $requestExp->fetchAll();
