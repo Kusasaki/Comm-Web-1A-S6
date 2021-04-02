@@ -132,6 +132,56 @@ include_once "includes/functions.php";
       </div>
     </div>
   </div>
+      <div class="card">
+    <img class="card-img-top" src="images/promo/promo2019_Hamilton.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Promotion 2019</h5>
+      <p class="card-text">Promotion Hamilton</p>
+      <div class="card-footer">
+        <a href ="descpromo.php?promo=2019">Voir la promotion 2019</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/promo/promoSansNom.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Promotion 2020</h5>
+      <p class="card-text">Promotion dont le nom n'est pas encore défini</p>
+      <div class="card-footer">
+        <a href ="descpromo.php?promo=2020">Voir la promotion 2020</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/promo/promoSansNom.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Promotion 2021</h5>
+      <p class="card-text">Promotion dont le nom n'est pas encore défini</p>
+      <div class="card-footer">
+        <a href ="descpromo.php?promo=2021">Voir la promotion 2021</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/promo/promoSansNom.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Promotion 2022</h5>
+      <p class="card-text">Promotion dont le nom n'est pas encore défini</p>
+      <div class="card-footer">
+        <a href ="descpromo.php?promo=2022">Voir la promotion 2022</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/promo/promoSansNom.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Promotion 2023</h5>
+      <p class="card-text">Promotion dont le nom n'est pas encore défini</p>
+      <div class="card-footer">
+        <a href ="descpromo.php?promo=2023">Voir la promotion 2023</a>
+      </div>
+    </div>
+  </div>
 </div>
 <?php
 include_once 'includes/footer.php';
