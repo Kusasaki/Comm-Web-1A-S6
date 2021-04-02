@@ -1,11 +1,10 @@
 <?php
 	include_once "includes/functions.php";
-	$id = $_POST['id'];
-	print_r($_POST);	
+	$id = $_POST['id'];	
 
     $supexp  = getDb()->prepare('delete from experiencepro where id_exppro = ?');
     $supexp->execute(array($id));
-    //redirect("mesexp.php");
+    redirect("mesexp.php");
 ?>
 
 
