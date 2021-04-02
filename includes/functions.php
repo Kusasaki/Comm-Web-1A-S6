@@ -95,7 +95,7 @@ function is_gest_connected(){
 
 //fonction qui récupère toutes les lignes d'une colonne d'une table
 function get_list_attribut($table, $attribut){
-    $request=getDB()->prepare("SELECT $attribut FROM $table 
+    $request=getDB()->prepare("SELECT distinct $attribut FROM $table 
         ORDER BY $attribut");
     $request->execute();
     return $request;
