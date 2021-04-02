@@ -92,3 +92,11 @@ function is_gest_connected(){
             return false;
     }
 }
+
+//fonction qui récupère toutes les lignes d'une colonne d'une table
+function get_list_attribut($table, $attribut){
+    $request=getDB()->prepare("SELECT $attribut FROM $table 
+        ORDER BY $attribut");
+    $request->execute();
+    return $request;
+}
