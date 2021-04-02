@@ -34,6 +34,9 @@ include_once "includes/functions.php";
         $rue = escape($_POST['rue']);
         $codeP = escape($_POST['codeP']);
         $ville = escape($_POST['ville']);
+        
+        $promo = getDb()->prepare('replace into promotion (annee) values (?)');
+        $promo->execute(array($promotion));
 
         $addeleve = getDb()->prepare('insert into eleve
         (nom_eleve, prenom_eleve, sexe, date_naissance, telephone_eleve, ad_mail, ad_postale, code_postal, ville, annee, id_etat, id_gestionnaire)
