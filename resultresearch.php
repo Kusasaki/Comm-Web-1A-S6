@@ -1,7 +1,5 @@
 <?php session_start();
-    include_once "includes/head.php";
     include_once "includes/functions.php"; 
-    include_once "includes/header.php"; 
     $table = $_GET['table'];
     $attribut = $_GET['attribut'];
     $valeur = $_GET['valeur'];
@@ -21,6 +19,10 @@
         $red="desceleve.php?nom=".$valeur."&prenom=".$prenom;
         redirect($red);
     }
+
+<?php 
+    include_once "includes/head.php";
+    include_once "includes/header.php"; ?>
 
 //recherche type d'expérience
     if($table=="experiencepro"){
