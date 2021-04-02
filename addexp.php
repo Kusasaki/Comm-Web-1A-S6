@@ -72,7 +72,7 @@ include_once "includes/functions.php";
 
 	        <p><input type="text" name="salaire" id="salaire" placeholder="Salaire" size="30" maxlength="30" /></p>
 
-			<p><input type="longtext" name="descexp" id="descexp" placeholder="Descrption de l'expérience" size="100" maxlength="1000" /></p></fieldset>
+			<p><input type="longtext" name="descexp" id="descexp" placeholder="Description de l'expérience" size="1000" maxlength="1000" /></p></fieldset>
 
 			<hr/>
 			<fieldset class="titre_page"><legend>Organisation</legend>
