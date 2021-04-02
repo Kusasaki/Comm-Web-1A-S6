@@ -56,9 +56,9 @@ include_once "includes/functions.php";
                         ?>
                         </div><br/>
 
-                        <form  name="modifierexp" action="modifierexp.php" method="post"><button type="submit">Modifier l'expérience</button><input type="hidden" name="idm" value="<?= $ligne['id_exppro'] ?>" ></input></form><br/>
+                        <form  name="modifierexp" action="modifierexp.php" method="post"><button type="submit">Modifier l'expérience</button><input type="hidden" name="id" value="<?= $ligne['id_exppro'] ?>" ></input></form><br/>
 
-                        <form  name="supexp" action="supexp.php" method="post"><button type="submit">Supprimer l'expérience</button><input type="hidden" name="ids" value="<?= $ligne['id_exppro'] ?>" ></input></form>
+                        <form  name="supexp" action="supexp.php" method="post"><button type="submit">Supprimer l'expérience</button><input type="hidden" name="id" value="<?= $ligne['id_exppro'] ?>" ></input></form>
                         <br/>
 
                     <?php } ?>
