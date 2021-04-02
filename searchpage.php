@@ -1,7 +1,7 @@
 <?php session_start();
     include_once "includes/head.php";
-    include_once "includes/header.php"; 
     include_once "includes/functions.php";
+    include_once "includes/header.php"; 
     ?>
     <h2 class="titre_page">Recherche</h2>
     </br>
