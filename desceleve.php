@@ -37,9 +37,10 @@
                 ?> <br/> <?php
                 echo "Date de naissance : " .$ligne['date_naissance'];
                 ?> <br/><p class="titre_page">On peut le/la contacter comment ? </p> <?php
-                if ($li['telephone']=0 || is_gest_connected()){
+                if ($li['telephone_eleve']=0 || is_gest_connected()){
                     echo "Téléphone : " .$ligne['telephone_eleve'];
                 }
+                else echo "Cette information est indisponible";
                 ?> <br/> <?php
                 if ($li['ad_mail']=0 || is_gest_connected()){
                 echo "Adresse mail : " .$ligne['ad_mail'];
