@@ -8,8 +8,8 @@
     
     //recherche d'une promo
     if($table == "promotion"){
-        $red = "../descpromo.php?promo=".$valeur;
-        redirect($red);
+        //$red = "descpromo.php?promo=".$valeur;
+        redirect("index.php");
     }
 
 //recherche d'un élève
