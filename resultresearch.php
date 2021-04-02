@@ -63,6 +63,7 @@
             //affiche organisation
             foreach($res as $ligne) 
             { ?>
+                <h5 class = "titre_rubrique">Expériences des anciens de l'ENSC</h5>
                 <div class="cadre">
                 <?php
                 echo "Nom : ". $ligne['nom_organisation']; 
@@ -81,7 +82,6 @@
                 $requestExp->execute(array($ligne['id_organisation']));
                 $res = $requestExp->fetchAll();
                 ?>
-                <h5 class = "titre_rubrique">Expériences des anciens de l'ENSC</h5>
                 </br>
                 <!-- Afficher les expériences liées à cette organisation-->
                 <?php
