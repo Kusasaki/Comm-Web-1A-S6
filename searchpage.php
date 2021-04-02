@@ -44,7 +44,7 @@
                 foreach ($res1 as $ligne){
                     $info = $ligne['nom_eleve'];
                     ?>
-                        <a class="dropdown-item" type="button" href="resultresearch.php?table=<?php echo "$table"?>&attribut=<?php echo "$attribut"?>&valeur=<?php echo "$info"?>"><?php echo "$info"?></a>
+                        <a class="dropdown-item" type="button" href="desceleve.php?nom=<?php echo "$info"?>&prenom=<?php echo "$attribut"?>"><?php echo "$info"?></a>
                     <?php
                 } ?>
             </div>
