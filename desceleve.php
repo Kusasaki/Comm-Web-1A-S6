@@ -31,23 +31,23 @@
                 ?> <br/> <?php
                 echo "Promotion : " .$ligne['annee'];
                 ?> <br/> <?php
-                if ($li['sexe']=0 || is_gest_connected()){
+                if ($li['sexe']=1 || is_gest_connected()){
                 echo "Sexe : " .$ligne['sexe'];
                 }
                 ?> <br/> <?php
                 echo "Date de naissance : " .$ligne['date_naissance'];
                 ?> <br/><p class="titre_page">On peut le/la contacter comment ? </p> <?php
-                if ($li['telephone_eleve']=0 || is_gest_connected()){
+                if ($li['telephone_eleve']=1 || is_gest_connected()){
                     echo "Téléphone : " .$ligne['telephone_eleve'];
                 }
                 else echo "Cette information est indisponible";
                 ?> <br/> <?php
-                if ($li['ad_mail']=0 || is_gest_connected()){
+                if ($li['ad_mail']=1 || is_gest_connected()){
                 echo "Adresse mail : " .$ligne['ad_mail'];
                 }
                 else echo "Cette information est indisponible";
                 ?> <br/> <p class="titre_page">Où il/elle habite ? </p><?php
-                if ($li['ad_postale']=0 || is_gest_connected()){
+                if ($li['ad_postale']=1 || is_gest_connected()){
                 echo "Adresse : " .$ligne['ad_postale']." ".$ligne['code_postal']." ".$ligne['ville'];
                 }
                 else echo "Cette information est indisponible";
