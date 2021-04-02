@@ -20,6 +20,7 @@
         
                 <?php }else{?>
                     <div class="titre_page">
+			    <?php echo "$nom $prenom";?>
                     </br></div> <?php
                  } 
             }
