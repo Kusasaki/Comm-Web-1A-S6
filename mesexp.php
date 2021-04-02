@@ -25,40 +25,40 @@ include_once "includes/functions.php";
                 <?php
                     ?><div><?php 
 
-                    foreach( $res as $ligne) 
+                    foreach( $res as $ligne1) 
                     { ?> <div class="cadre"> <p class="titre_page">Expérience : </p> <?php
                         
-                        echo "Type d'expérience : ". $ligne['type_exp']; 
+                        echo "Type d'expérience : ". $ligne1['type_exp']; 
                         ?> <br/> <?php
-                        echo "Brève description de l'expérience : ". $ligne['description_exp']; 
+                        echo "Brève description de l'expérience : ". $ligne1['description_exp']; 
                         ?> <br/> <?php
-                        echo "Durée de l'expérience : ". $ligne['date_debut']." - ".$ligne['date_fin']; 
+                        echo "Durée de l'expérience : ". $ligne1['date_debut']." - ".$ligne1['date_fin']; 
                         ?> <br/> <?php
-                        echo "Salaire : ". $ligne['salaire']; 
+                        echo "Salaire : ". $ligne1['salaire']; 
                         ?> <br/> <?php
-                        if ($ligne['etat'] == 0)echo "Etat : visible";
+                        if ($ligne1['etat'] == 0)echo "Etat : visible";
                         else echo "Etat : invisible";
                         
-                        $id_organisation=$ligne['id_organisation'];
+                        $id_organisation=$ligne1['id_organisation'];
                     $organisation = get_organisation($id_organisation);
                     $resu = $organisation->fetchAll();
-                    foreach( $resu as $ligne) 
+                    foreach( $resu as $ligne2) 
                         { ?> <p class="titre_page">Organisation : </p> <?php
-                            echo "Nom : ". $ligne['nom_organisation']; 
+                            echo "Nom : ". $ligne2['nom_organisation']; 
                             ?> <br/> <?php
-                            echo "Type d'organisation : ". $ligne['type_organisation']; 
+                            echo "Type d'organisation : ". $ligne2['type_organisation']; 
                             ?> <br/> <?php 
-                            echo "Secteur d'activité : ". $ligne['secteur_activite']; 
+                            echo "Secteur d'activité : ". $ligne2['secteur_activite']; 
                             ?> <br/> <?php
-                            echo "Adresse : ". $ligne['ad_postale']." ".$ligne['code_postal_organisation']." ".$ligne['ville_organisation']; 
+                            echo "Adresse : ". $ligne2['ad_postale']." ".$ligne2['code_postal_organisation']." ".$ligne2['ville_organisation']; 
                             ?> <br/> <?php
                         }
                         ?>
                         </div><br/>
 
-                        <form  name="modifierexp" action="modifierexp.php" method="post"><button type="submit">Modifier l'expérience</button><input type="hidden" name="id" value="<?= $ligne['id_exppro'] ?>" ></input></form><br/>
+                        <form  name="modifierexp" action="modifierexp.php" method="post"><button type="submit">Modifier l'expérience</button><input type="hidden" name="id" value="<?= $ligne1['id_exppro'] ?>" ></input></form><br/>
 
-                        <form  name="supexp" action="supexp.php" method="post"><button type="submit">Supprimer l'expérience <?= $ligne['id_exppro'] ?> </button><input type="hidden" name="id" value="<?= $ligne['id_exppro'] ?>" ></input></form>
+                        <form  name="supexp" action="supexp.php" method="post"><button type="submit">Supprimer l'expérience <?= $ligne1['id_exppro'] ?> </button><input type="hidden" name="id" value="<?= $ligne1['id_exppro'] ?>" ></input></form>
                         <br/> <?php print_r($ligne); ?>
 
                     <?php } ?>
