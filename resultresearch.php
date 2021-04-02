@@ -20,9 +20,8 @@
         redirect($red);
     }
 
-<?php 
     include_once "includes/head.php";
-    include_once "includes/header.php"; ?>
+    include_once "includes/header.php"; 
 
 //recherche type d'expérience
     if($table=="experiencepro"){
