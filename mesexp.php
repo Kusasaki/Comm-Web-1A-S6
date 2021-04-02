@@ -39,7 +39,7 @@ include_once "includes/functions.php";
                         if ($ligne1['etat'] == 0)echo "Etat : visible";
                         else echo "Etat : invisible";
                         
-                        $id_organisation=$ligne1['id_organisation'];
+                    $id_organisation=$ligne1['id_organisation'];
                     $organisation = get_organisation($id_organisation);
                     $resu = $organisation->fetchAll();
                     foreach( $resu as $ligne2) 
