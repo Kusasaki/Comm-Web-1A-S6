@@ -24,7 +24,7 @@
                 foreach ($res as $ligne){
                     $info = $ligne['annee'];
                     ?>
-                    <a class="dropdown-item" type="button" href="resultresearch.php?table=<?php echo "$table"?>&attribut=<?php echo "$attribut"?>&valeur=<?php echo "$info"?>"><?php echo "$info"?></a>
+                    <a class="dropdown-item" type="button" href="descpromos.php?promo=<?php echo "$info"?>"</a>
                     <?php
                 } ?>
             </div>
