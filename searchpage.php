@@ -45,11 +45,11 @@
                     $nom = $ligne['nom_eleve'];
                     //recupre le prenom pour rediriger
                     $request = getDb() -> prepare("SELECT prenom_eleve FROM eleve WHERE nom_eleve=?");
-                    $request->execute(array($valeur));
-                    $res = $request->fetch();
-                    $prenom = $res['prenom_eleve'];
+                    $request->execute(array($nom));
+                    $resP = $request->fetch();
+                    $prenom = $resP['prenom_eleve'];
                     ?>
-                        <a class="dropdown-item" type="button" href="desceleve.php?nom=<?php echo "$nom"?>&prenom=<?php echo "$prenom"?>"><?php echo "$nom"?></a>
+                        <a class="dropdown-item" type="button" href="desceleve.php?nom=<?= $nom ?>&prenom=<?= $prenom?>"><?= $nom," ",$prenom ?></a>
                     <?php
                 } ?>
             </div>
