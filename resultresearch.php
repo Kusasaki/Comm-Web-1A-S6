@@ -1,5 +1,6 @@
 <?php session_start();
     include_once "includes/head.php";
+    include_once "includes/functions.php"; 
     include_once "includes/header.php"; 
     $table = $_GET['table'];
     $attribut = $_GET['attribut'];
